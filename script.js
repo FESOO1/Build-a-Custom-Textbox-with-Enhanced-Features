@@ -5,29 +5,37 @@ const messageContainer = document.querySelector('.message-container');
 
 // 
 
-function displayMessage(messageText, messageType) {
+function displayMessage(messageType) {
     const messageBox = document.createElement('div');
     messageBox.classList.add('message-box');
     messageContainer.appendChild(messageBox);
 
     const paragraph = document.createElement('p');
     paragraph.classList.add('paragraph');
-    paragraph.textContent = 'The paragraph';
+    paragraph.textContent = messageInput.value;
     messageBox.appendChild(paragraph);
 
     const messageTypeText = document.createElement('h5');
     messageTypeText.classList.add('message-type-text');
-    messageTypeText.textContent = 'Message type:';
+    messageTypeText.textContent = 'Message type: Warning';
     messageBox.appendChild(messageTypeText);
-
+    
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-button');
     deleteButton.textContent = 'Delete';
     messageBox.appendChild(deleteButton);
-
+    
     deleteButton.addEventListener('click', () => {
         messageBox.parentNode.removeChild(messageBox);
     });
+
+    if (messageType === 'warning') {
+        console.log('Warning');
+    } else if (messageType === 'alert') {
+        console.log('Alert');
+    } else {
+        console.log('Something');
+    };
 };
 
 
@@ -36,5 +44,5 @@ function displayMessage(messageText, messageType) {
 textButton.addEventListener('click', e => {
     e.preventDefault();
 
-    displayMessage();
+    displayMessage('warning');
 });

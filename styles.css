@@ -75,6 +75,9 @@ form {
 
 .message-container {
     width: 350px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
 .message-box {
