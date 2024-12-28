@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(16,16,16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding-block: 50px;
+}
+
+/* FORM INPUT */
+
+.form-input {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.message-input {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
+    background-color: rgb(25,25,25);
+    padding: 10px;
+    border-radius: 0.2rem;
+    border: 1px solid rgba(255,255,255,0.04);
+    color: white;
+}
+
+.radio-inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+}
+
+.radio-inputs label {
+    color: white;
+    background-color: rgb(25,25,25);
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    border-radius: 0.2rem;
+}
+
+.text-button {
+    height: 40px;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    border: 0;
+    background-color: rgb(35,35,35);
+    color: white;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+
+/* MESSAGE CONTAINER */
+
+.message-container {
+    width: 350px;
+}
+
+.message-box {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgb(35,35,35);
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.paragraph {
+    padding: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(25,25,25);
+    border-radius: 0.2rem;
+}
+
+.message-type-text {
+    padding: 5px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+.delete-button {
+    width: 100%;
+    height: 40px;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 0;
+    background-color: rgb(35,35,35);
+    color: white;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: red;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Message Box</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <form class="form">
+        <div class="form-input">
+            <textarea placeholder="Write your message here..." class="message-input"></textarea>
+            <div class="radio-inputs">
+                <label for="warningMessage"><input checked type="radio" name="radio-input" value="warning" id="warningMessage" class="message-type-input"> Warning</label>
+                <label for="alertMessage"><input type="radio" name="radio-input" value="alert" id="alertMessage" class="message-type-input"> Alert</label>
+                <label for="regularMessage"><input type="radio" name="radio-input" value="regular" id="regularMessage" class="message-type-input"> Regular</label>
+            </div>
+            <button type="submit" class="text-button">SEND</button>
+        </div>
+    </form>
+    <div class="message-container">
+        
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
