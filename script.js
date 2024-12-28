@@ -29,12 +29,19 @@ function displayMessage(messageType) {
         messageBox.parentNode.removeChild(messageBox);
     });
 
+    //
+    for (const messageTypeButton of radioButtons) {
+        if (messageTypeButton.checked) {
+            messageTypeText.textContent = 'Message type:  ' + messageTypeButton.value;
+        };
+    };
+
     if (messageType === 'warning') {
         console.log('Warning');
     } else if (messageType === 'alert') {
         console.log('Alert');
     } else {
-        console.log('Something');
+        console.log('Regular');
     };
 };
 
@@ -44,5 +51,9 @@ function displayMessage(messageType) {
 textButton.addEventListener('click', e => {
     e.preventDefault();
 
-    displayMessage('warning');
+    for (const messageTypeButton of radioButtons) {
+        if (messageTypeButton.checked) {
+            displayMessage(messageTypeButton.value);
+        };
+    };
 });

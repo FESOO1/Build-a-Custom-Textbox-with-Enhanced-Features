@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
     row-gap: 25px;
+    padding-bottom: 50px;
 }
 
 /* FORM */
